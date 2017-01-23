@@ -1,0 +1,22 @@
+{
+  "name": "student-randomizer",
+  "version": "1.0.0",
+  "description": "Click to pick a random student!",
+  "main": "index.js",
+  "engines": {
+    "node": "6.9.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danjumamilhaus/student-randomizer.git"
+  },
+  "author": "Daniel Ritchie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danjumamilhaus/student-randomizer/issues"
+  },
+  "homepage": "https://github.com/danjumamilhaus/student-randomizer#readme"
+}
