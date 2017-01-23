@@ -2,7 +2,6 @@
   "name": "student-randomizer",
   "version": "1.0.0",
   "description": "Click to pick a random student!",
-  "main": "index.js",
   "engines": {
     "node": "6.9.4"
   },
