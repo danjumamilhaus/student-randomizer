@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/students');
 
 app.use(express.static('client'));
 
-app.get('/server', function(req, res) {
+app.get('/students', function(req, res) {
   // res.send('bacon');
   res.send(StudentCtrl.getRandomStudent());
 });

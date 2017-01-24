@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Student Randomizer</title>
+  <head>
+    <title>Student Randomizer</title>
+  </head>
+  <body>
+    <div ng-app="randomizer">
+      <h1>Student Randomizer</h1>
+      <div ng-controller="rando-crtl">
+        <button ng-click="getRandom()">Get Rando</button>
+        <hr>
+        <h1>
+          {{ student }}
+        </h1>
+      </div>
+    </div>
 
-  <script src="index.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
-</head>
-<body>
-  <h1>Hello World</h1>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
