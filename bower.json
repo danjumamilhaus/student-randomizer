@@ -1,0 +1,14 @@
+{
+  "name": "student-randomizer",
+  "description": "Click to pick a random student!",
+  "authors": [
+    "Daniel Ritchie"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/danjumamilhaus/student-randomizer",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
