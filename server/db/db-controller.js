@@ -27,7 +27,7 @@ exports.getRandomStudent = function(req, res, next) {
       })();
 
       // console.log(user);
-      console.log(user[random].student);
+      // console.log(user[random].student);
       return user[random].student;
     })
     .catch(function(err) {
