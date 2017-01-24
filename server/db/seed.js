@@ -1,3 +1,6 @@
 module.exports = [
-  {student: 'Bobby Phan'}
+  {student: 'Daniel Ritchie'},
+  {student: 'Bobby Phan'},
+  {student: 'Matt Fernandez'},
+  {student: 'Andy Walz'}
 ]

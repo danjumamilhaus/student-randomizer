@@ -1,15 +1,24 @@
+var mongoose = require('mongoose');
+var express = require('express');
 var Student = require('./db-model.js');
 var seed = require('./seed.js');
 
-Student.collection.insertMany(seed);
+// Student.drop('Students');
+// Student.insertMany(seed);
+
 
 exports.getRandomStudent = function(req, res, next) {
-  Student.find()
-    .limit(-1)
-    .skip(Math.floor(Math.random() * 30) + 1);
-    .next(function(user) {
-      console.log(user);
-      res.send(user);
+  Student.find({})
+    .then(function(user) {
+      var random = (function() {
+        return Math.floor(Math.random() * 3) + 1;
+      })();
+
+      console.log(user[random].student);
+      return user[random].student;
+    })
+    .catch(function(err) {
+      console.error(err);
     });
 };
 
