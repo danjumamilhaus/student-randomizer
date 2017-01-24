@@ -3,6 +3,9 @@ var express = require('express');
 var Student = require('./db-model.js');
 var seed = require('./seed.js');
 
+/////////////////////////////////////////////////
+////////// KENNY LOGGINS DANGER ZONE ///////////
+///////////////////////////////////////////////
 // Student.drop('Students');
 // var db = mongoose.connection;
 
@@ -12,7 +15,9 @@ var seed = require('./seed.js');
 //   }
 // });
 // Student.insertMany(seed);
-
+///////////////////////////////////////
+//////////////////////////////////////
+/////////////////////////////////////
 
 exports.getRandomStudent = function(req, res, next) {
   Student.find({})
@@ -21,8 +26,8 @@ exports.getRandomStudent = function(req, res, next) {
         return Math.floor(Math.random() * 25) + 1;
       })();
 
-      console.log(user);
-      // console.log(user[random].student);
+      // console.log(user);
+      console.log(user[random].student);
       return user[random].student;
     })
     .catch(function(err) {
