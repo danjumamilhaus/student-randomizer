@@ -4,4 +4,4 @@ var StudentSchema = new mongoose.Schema({
   student: String
 });
 
-module.exports = mongoose.model('Students')
+module.exports = mongoose.model('Students', StudentSchema);
