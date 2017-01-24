@@ -5,6 +5,8 @@ var app = express();
 
 mongoose.connect('mongodb://localhost/stud-rando');
 
-// app.get('/', function(req, res) {});
+app.get('/', function(req, res) {
+  res.send('bacon');
+});
 
 module.exports = app;
