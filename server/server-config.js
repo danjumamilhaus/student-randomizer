@@ -1,6 +1,7 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var StudentCtrl = require('./db/db-controller.js')
+var bodyParser = require('body-parser');
 
 var app = express();
 
@@ -9,10 +10,9 @@ var app = express();
 mongoose.connect('mongodb://localhost/students');
 
 app.use(express.static('client'));
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-app.get('/students', function(req, res) {
-  // res.send('bacon');
-  res.send(StudentCtrl.getRandomStudent());
-});
+app.get('/students', StudentCtrl.getRandomStudent);
 
 module.exports = app;

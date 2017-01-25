@@ -2,21 +2,31 @@ angular.module('randomizer', []);
 
 angular.module('randomizer')
   .controller('rando-ctrl', ['$scope', 'randoFactory',function($scope, randoFactory) {
-    $scope.student = randoFactory.counter;
-    console.log(randoFactory.counter);
+    $scope.student = '';
 
     $scope.getRandom = function() {
-      randoFactory.counter++
-      $scope.student = randoFactory.counter;
+      randoFactory.getStudent()
+        .then(function(student) {
+          $scope.student = student;
+        })
+        .catch(function(err) {
+          console.error(err);
+        });
     };
   }])
-  .factory('randoFactory', function($http) {
-    var counter = 0;
+  .factory('randoFactory', ['$http', function($http) {
+    var getStudent = function() {
+      return $http({
+        method: 'GET',
+        url: '/students',
+      })
+      .then(function(res) {
+        console.log('Res.data: ', res.data);
+        return res.data;
+      });
+    };
 
     return {
-      counter: counter
+      getStudent: getStudent
     };
-  });
-
-
-
+  }]);

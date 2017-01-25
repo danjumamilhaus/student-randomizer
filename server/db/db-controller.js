@@ -19,21 +19,24 @@ var seed = require('./seed.js');
 //////////////////////////////////////
 /////////////////////////////////////
 
-exports.getRandomStudent = function(req, res, next) {
-  Student.find({})
-    .then(function(user) {
-      var random = (function() {
-        return Math.floor(Math.random() * 25) + 1;
-      })();
 
-      // console.log(user);
-      // console.log(user[random].student);
-      return user[random].student;
-    })
-    .catch(function(err) {
-      console.error(err);
-    });
-};
+module.exports = {
+  getRandomStudent: function(req, res, next) {
+    Student.find({})
+      .then(function(user) {
+        var random = (function() {
+          return Math.floor(Math.random() * 25) + 1;
+        })();
+
+        // console.log(user);
+        // console.log(user[random].student);
+        res.json(user[random].student);
+      })
+      .catch(function(err) {
+        console.error(err);
+      });
+  }
+}
 
 // module.exports = {
 //   allStudents: function(req,res, next) {
