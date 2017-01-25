@@ -27,9 +27,6 @@ module.exports = {
         var random = (function() {
           return Math.floor(Math.random() * 24) + 1;
         })();
-
-        // console.log(user);
-        // console.log(user[random].student);
         res.json(user[random].student);
       })
       .catch(function(err) {
