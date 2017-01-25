@@ -21,6 +21,7 @@ angular.module('randomizer')
         url: '/students',
       })
       .then(function(res) {
+        console.log('Student: ', res.data);
         return res.data;
       });
     };
