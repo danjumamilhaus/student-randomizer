@@ -25,7 +25,7 @@ module.exports = {
     Student.find({})
       .then(function(user) {
         var random = (function() {
-          return Math.floor(Math.random() * 25) + 1;
+          return Math.floor(Math.random() * 24) + 1;
         })();
 
         // console.log(user);

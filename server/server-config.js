@@ -5,9 +5,9 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-// mongoose.connect('mongodb://heroku_899x2dvs:nm3eu0klm66elkf99oinqacgbh@ds127389.mlab.com:27389/heroku_899x2dvs');
+mongoose.connect('mongodb://heroku_9v678l10:lvsjk9mbh74cfjusecqh1ed3ae@ds133438.mlab.com:33438/heroku_9v678l10');
 
-mongoose.connect('mongodb://localhost/students');
+// mongoose.connect('mongodb://localhost/students');
 
 app.use(express.static('client'));
 app.use(bodyParser.urlencoded({extended: true}));
